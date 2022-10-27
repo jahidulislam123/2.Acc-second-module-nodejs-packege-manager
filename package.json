@@ -1,0 +1,20 @@
+{
+  "name": "second-calss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.globalObject&module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jahidulislam123/2.Acc-second-module-nodejs-packege-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jahidulislam123/2.Acc-second-module-nodejs-packege-manager/issues"
+  },
+  "homepage": "https://github.com/jahidulislam123/2.Acc-second-module-nodejs-packege-manager#readme"
+}
