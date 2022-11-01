@@ -57,37 +57,59 @@
 
 // ekhon local module use korbona , core module use korbo 
 
-const http =require('http');
-const { stringify } = require('querystring');
-console.log(http);
 
-const server = http.createServer((req,res)=>{
-  // res.end("hello nodoejs")
-  // console.log(req.url)
-  if(req.url=='/'){
-    res.writeHead(200,{'Content-Type':'text/html'})
-    res.write('<p>This is home page </p>');
-    res.end()
-  }
 
-  else if(req.url=='/contact'){
-    res.writeHead(200,{'Content-Type':'text/html'})
-    res.write('<p>This is contact  page </p>');
-    res.end()
-  }
+//eita alada arekta part jokhon porbo uporer gula comment out korbo tarpor nicer gula comment out korbo 
+// const http =require('http');
+// const { stringify } = require('querystring');
+// console.log(http);
 
-  else if(req.url=='/about-us'){
-    res.writeHead(200,{'Content-Type':'text/html'})
-    res.write('<p>This is about us  page </p>');
-    res.end()
-  }
+// const server = http.createServer((req,res)=>{
+//   // res.end("hello nodoejs")
+//   // console.log(req.url)
+//   if(req.url=='/'){
+//     res.writeHead(200,{'Content-Type':'text/html'})
+//     res.write('<p>This is home page </p>');
+//     res.end()
+//   }
 
-  else if(req.url=='/json'){
-    res.writeHead(200,{'Content-Type':'application/json'})
-    res.write(JSON.stringify({course:"ACC"}));
-    res.end()
-  }
+//   else if(req.url=='/contact'){
+//     res.writeHead(200,{'Content-Type':'text/html'})
+//     res.write('<p>This is contact  page </p>');
+//     res.end()
+//   }
+
+//   else if(req.url=='/about-us'){
+//     res.writeHead(200,{'Content-Type':'text/html'})
+//     res.write('<p>This is about us  page </p>');
+//     res.end()
+//   }
+
+//   else if(req.url=='/json'){
+//     res.writeHead(200,{'Content-Type':'application/json'})
+//     res.write(JSON.stringify({course:"ACC"}));
+//     res.end()
+//   }
+// })
+// const PORT=5000;
+// server.listen(PORT)
+// console.log(`server is running at ${PORT}`);
+
+
+
+// 3rd ongso suro hobe ekhon theke 
+
+const http =require('http')
+const url =require('url')
+
+const server =http.createServer((req,res)=>{
+  const address_url ='http://localhost:5000/contact?name=mezba&country=bangladesh';
+  const parsed_url= url.parse(address_url,true);
+  console.log(parsed_url);
+
 })
-const PORT=5000;
-server.listen(PORT)
+console.log(url)
+
+const PORT =5000;
+server.listen(PORT);
 console.log(`server is running at ${PORT}`);
