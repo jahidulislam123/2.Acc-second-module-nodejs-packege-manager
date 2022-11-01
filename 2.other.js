@@ -7,12 +7,17 @@ const add =(num1,num2)=>{
 
 }
 
+const substraction =(num1,num2)=>{
+    return num1-num2
+}
+
 //evabeo kora jay
 // module.exports.name=name;
 module.exports={
     
     name:name,
-    add:add
+    add:add,
+    substraction:substraction
 
 }
 
